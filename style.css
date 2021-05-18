@@ -1,0 +1,21 @@
+body{
+    background-color:#EEEEEE;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif
+}
+#welcome{
+    text-align: center;
+    background-color: #2980B9;
+    color: #FFFFFF;
+}
+#box{
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 10px;
+}
+.horizontalDashedLine{
+    border-bottom: 5px dashed #EEEEEE;
+    width: 550px;
+    color: #31af62;
+    ;
+}
