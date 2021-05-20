@@ -1,0 +1,36 @@
+body{
+    background-color:#EEEEEE;
+    color:black;
+    font-family: 'Raleway', sans-serif; 
+    background-image:url("interlaced.png");
+    background-size:contain;
+    margin: auto;
+    align-content: center;
+    /* background-repeat: no-repeat; */
+}
+#welcome{
+    font-family: 'Dosis', sans-serif;
+   font-size:x-large;
+    text-align: center;
+    /* background-color: #2980B9; */
+    color: black;
+}
+#box{
+    /* background-color: #FFFFFF; */
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    border: 1.5px solid #e2e2e2;
+}
+.horizontalDashedLine{
+    border-bottom: 10px dashed #EEEEEE;
+    border-width: medium;
+    width: 100%;
+    color: #31AF62;
+}
+#paths{
+    margin: auto;
+    align-self: center;
+
+}
