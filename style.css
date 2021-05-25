@@ -10,27 +10,55 @@ body{
 }
 #welcome{
     font-family: 'Dosis', sans-serif;
-   font-size:x-large;
+   font-size:medium;
     text-align: center;
-    /* background-color: #2980B9; */
-    color: black;
+    color: white;
+    background-color: black;
+    /* margin: 0%, 80%, 80%, 20%;  */
+    width: 20%;
+    height: fit-content;
+
 }
 #box{
     /* background-color: #FFFFFF; */
     border-radius: 10px;
+
     padding: 10px;
     width: 80%;
     margin: auto;
     border: 1.5px solid #e2e2e2;
 }
-.horizontalDashedLine{
-    border-bottom: 10px dashed #EEEEEE;
-    border-width: medium;
-    width: 100%;
-    color: #31AF62;
+.hLine{
+    border-bottom: 10px solid white;
+    border-width:medium;
+    width: 80%;
+    margin-top: 0%;
+    margin-bottom: 0% 10% 0% 10%;
+    padding-bottom: 0%;
 }
-#paths{
-    margin: auto;
-    align-self: center;
+.postItWrap{
+    width:inherit;
+    height: inherit;
+    background-color: transparent;
 
+    border-radius: 5%;
+}
+.postIt{
+    width:inherit;
+    height: inherit;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    color: white;
+    background-color: black;
+    border-radius: 5%;
+    flex: 1;
+}
+.postItDiv{
+flex: .25;
+background-color: transparent;
+}
+.divisor{
+    width:100%;
+    background-color: transparent;
+    flex: .5;
 }

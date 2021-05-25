@@ -1,0 +1,63 @@
+head{
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    background-image:url(personalBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#intro{
+
+}
+.hLine{
+    border-bottom: 10px solid black;
+    border-width:medium;
+    width: 80%;
+    margin: 0% 10% 0% 10%;
+}
+#welcome{
+    font-family: 'Dosis', sans-serif;
+    font-size:large;
+    text-align: center;
+    color: black;
+    /* margin: 0%, 80%, 80%, 20%;  */
+    height: fit-content;
+    width: inherit;
+    margin: auto;
+    align-content: center;
+    flex: 3;
+}
+.boxWrapper{
+    height:inherit;
+    width: inherit;
+    display: flex;
+}
+.box{
+    height: inherit;
+    width: height;
+    flex: 1;
+    background-color: black;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+}
+.boxBreaker{
+    flex:.25;
+    height:inherit;
+    background-color: transparent;
+}
+.iconWrapper{
+    height:inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+}
+.icon{
+    flex: 1;
+    height: inherit;
+}
+.iconBreaker{
+    flex: .1;
+    height: inherit;
+    background-color: transparent;
+}
