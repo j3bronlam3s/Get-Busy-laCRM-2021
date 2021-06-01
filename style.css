@@ -1,31 +1,42 @@
+/*
+Colors
+Black - #1F271B
+White - #FEFFFE
+Reddish - #B54554
+Pinkish - #C2A0AC 
+ */
 head{
 }
 body{
     font-family: 'Raleway', sans-serif;
+    color: #1F271B;
+    margin: 0px;
+}
+#intro{
     background-image:url(personalBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
-#intro{
-
-}
-.hLine{
-    border-bottom: 10px solid black;
+#welcomeHLine{
+    border-bottom: 10px solid #1F271B;
     border-width:medium;
     width: 80%;
-    margin: 0% 10% 0% 10%;
+    margin: 0% 10% -5% 10%;
 }
 #welcome{
     font-family: 'Dosis', sans-serif;
     font-size:x-large;
     text-align: center;
-    color: black;
-    /* margin: 0%, 80%, 80%, 20%;  */
+    color: #1F271B;
     height: fit-content;
     width: inherit;
     margin: auto;
-    align-content: center;
     flex: 3;
+
 }
 .boxWrapper{
     height:inherit;
@@ -36,15 +47,28 @@ body{
     height: inherit;
     width: height;
     flex: 1;
-    background-color: black;
+    background-color: #1F271B;
     border-radius: 5%;
-    color: white;
+    color: #FEFFFE;
     text-align: center;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
 }
+.box:hover{
+    background-color: rgb(32, 28, 28);
+    color:#FEFFFE;
+    box-shadow: 10px 10px 10px 10px rgb(181, 69, 84);
+    /* , 0 5px 50px 0 purple; */
+    opacity: 1;
+    }
 .boxBreaker{
     flex:.25;
     height:inherit;
     background-color: transparent;
+}
+a:visited, link{
+    color: #FEFFFE;
 }
 .iconWrapper{
     height:inherit;
@@ -52,13 +76,27 @@ body{
     display: flex;
     flex-direction: column;
     align-content:center;
+    align-self: flex-end;
 }
-/* .icon{
-    flex: 1;
-    height: inherit;
-} */
 .iconBreaker{
     width: 10px;
     height: inherit;
     background-color: transparent;
 }
+#aboutMe{
+    background-image: url(aboutMeBackground.png);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.imageWrapper{
+    height:inherit;
+    width:inherit;
+}
+#skills{
+    height: 100vh;
+    width: 100%;
+    background-image: url(skillsBackground.png);
+}
+

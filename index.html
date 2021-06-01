@@ -5,71 +5,81 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-<!-- entire website -->
+<!-- entire page -->
+<div>
 
-<!-- intro page -->
-<div id = "intro" style = "display: flex; flex-direction: row;">
-
+<div id = "intro">
+<!-- ledt side whitespace -->
 <div style = "display: flex; flex: 2; flex-direction: column;">
 
 </div>
-
+<!-- center section -->
 <div style = "display: flex; flex: 6; flex-direction: column;">
-        <div style = "flex: 3; background-color: transparent; color: transparent">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </p>
+    <!-- whitespace above welcome -->
+        <div style = "flex: 2.5; background-color: transparent; color: transparent">
+
         </div>
         <!-- Name -->
         <div id = "welcome">
             <h1>Jebron Perkins</h1>
-            <div class = "hLine"></div>
+            <div id = "welcomeHLine"></div>
             <h1 style = "font-family: 'Noto Sans KR', sans-serif;">&#xC81C;&#xBE0C;&#xB780; &#xD37C;&#xD0A8;&#xC2A4;</h1>
         </div>
+        <!-- Whitespace between name and buttons -->
         <div style = "flex: .25">
-            <p> 
 
-            </p>
         </div>
         <!-- Buttons -->
-        <div style = "flex: 1.25">
+        <div style = "flex: 1.25; align-content: flex-start;">
             <div class="boxWrapper">
-                <div class = "box">
-                    <p>about me</p>
+
+                    <div class = "box">
+                    <a href="#aboutMe" style="text-decoration: none; display: block; height: 100%;">
+                        <p>about me</p>
+                    </a>
                 </div>
                     <div class = "boxBreaker">
                         <p> </p>
                     </div>
                 <div class = "box">
-                    <p>skills</p>
+                    <a href="#skills" style="text-decoration: none; display: block; height: 100%;">
+                        <p>skills</p>
+                    </a>
                 </div>
                     <div class = "boxBreaker">
                         <p> </p>
                     </div>
                 <div class = "box">
-                    <p>projects</p>
+                    <a href="#projects" style="text-decoration: none;  display: block; height: 100%;">
+                        <p>projects</p>
+                    </a>
                 </div>
                     <div class = "boxBreaker">
                         <p> </p>
                     </div>
                 <div class = "box">
-                    <p>tbd</p>
+                    <a href="#tbd" style="text-decoration: none;  display: block; height: 100%;">
+                        <p>tbd</p>
+                    </a>
                 </div>
                     <div class = "boxBreaker">
                         <p> </p>
                     </div>
                 <div class = "box">
-                    <p>contact me</p>
+                    <a href="#contactMe" style="text-decoration: none;  display: block; height: 100%;">
+                        <p>contact me</p>
+                    </a>
                 </div>
 
             </div>
         </div>
+        <!-- bottom page whitespace -->
         <div style = "flex: 1.5; color: transparent">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    </div>
-    </div>
 
+        </div>
+    </div>
+<!-- right section -->
 <div style = "flex: 2; display: flex; flex-direction: column;">
-
-    <div style="align-self: flex-end;">
         <div class = "iconWrapper">
                 <a href = "https://github.com/j3bronlam3s"><img alt="Github Icon" src="githubIcon.png" width="50px" height="50px"></a>
                 <div class = "iconBreaker">
@@ -86,13 +96,45 @@
                 <a href = "https://instagram.com/j3bron_lam3s"><img alt="Instagram Icon" src="instagramIcon.png" width="50px" height="50px"></a>
         </div>
     </div>
-        <div style = "flex: 8.5">
-            <!-- <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p> -->
-        </div>
-    </div>
-        
 </div>
 
+</div>
+
+<!-- About Me -->
+<!-- entire Page -->
+<div id = "aboutMe">
+
+    <div style="flex: 7; display: flex; flex-direction: row;">
+        <!-- photo -->
+        <div style="flex: 4; text-align: center;">
+            <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "300vh">
+            <!-- <div class = "imageWrapper">
+                <img src="IMG_5542.jpg" height="10%" width="100%">
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div> -->
+        </div>
+        <!-- bio -->
+        <div style="flex: 6;">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>    
+        </div>
+    
+    </div>
+    <!-- timeline -->
+    <div style="flex: 3; color: transparent; text-align: center;">
+            <img src="timeline6.svg" height="250vh">
+    </div>
+    
+    </div>
+
+    <!-- skills -->
+    <div id="skills" style="display: flex; flex: 1; text-align: center;">
+        <div class="vline"></div>
+        <div class="hline"></div>
+    </div>
+
+<!-- page end -->
 </div>
 
 </body>
