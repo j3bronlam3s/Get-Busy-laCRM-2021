@@ -5,12 +5,17 @@ White - #FEFFFE
 Reddish - #B54554
 Pinkish - #C2A0AC 
  */
+html{
+    scroll-behavior: smooth;
+}
 head{
+    
 }
 body{
     font-family: 'Raleway', sans-serif;
     color: #1F271B;
     margin: 0px;
+    
 }
 #intro{
     background-image:url(personalBackground.jpg);
