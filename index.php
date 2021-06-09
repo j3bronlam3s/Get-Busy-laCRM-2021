@@ -1,4 +1,11 @@
+
 <head>
+<!-- <?php
+$titles = ["Jebron Perkins", "Jebron.com", "This is not a website"];
+// $selectedTitle = $titles[array_rand($titles, 1)];
+$selectedTitle = $titles[$_REQUEST["title_id"]];
+echo "<title>$selectedTitle</title>"
+?> -->
     <title>Jebron Perkins</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Montserrat&family=Raleway&family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
@@ -81,6 +88,9 @@
 <!-- right section -->
 <div style = "flex: 2; display: flex; flex-direction: column;">
         <div class = "iconWrapper">
+                <div class = "iconBreaker">
+                    <p> </p>
+                </div>
                 <a href = "https://github.com/j3bronlam3s"><img alt="Github Icon" src="githubIcon.png" width="50px" height="50px"></a>
                 <div class = "iconBreaker">
                     <p> </p>
