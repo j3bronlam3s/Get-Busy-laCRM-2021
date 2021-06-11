@@ -5,19 +5,19 @@ White - #FEFFFE
 Reddish - #B54554
 Pinkish - #C2A0AC 
  */
-html{
+/* html{
     scroll-behavior: smooth;
-}
-head{
+} */
+/* head{
     
-}
+} */
 body{
     font-family: 'Raleway', sans-serif;
     color: #1F271B;
     margin: 0px;
     
 }
-#intro{
+/* #intro{
     background-image:url(personalBackground.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +25,7 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-}
+} */
 #welcomeHLine{
     border-bottom: 10px solid #1F271B;
     border-width:medium;
@@ -34,7 +34,7 @@ body{
 }
 #welcome{
     font-family: 'Dosis', sans-serif;
-    font-size:x-large;
+    font-size:xx-small;
     text-align: center;
     color: #1F271B;
     height: fit-content;
@@ -56,7 +56,7 @@ body{
     border-radius: 5%;
     color: #FEFFFE;
     text-align: center;
-    font-size: large;
+    font-size: x-large;
     display: flex;
     flex-direction: column;
 }
@@ -98,6 +98,9 @@ a:visited, link{
 .imageWrapper{
     height:inherit;
     width:inherit;
+}
+#bio{
+    font-size: xx-large;
 }
 #skills{
     height: 100vh;
