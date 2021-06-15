@@ -15,7 +15,6 @@
         margin: 0px;
         
     }
-
     #intro{
         background-image:url(personalBackground.jpg);
         background-repeat: no-repeat;
@@ -104,18 +103,30 @@
     #skills{
         height: 100vh;
         width: 100%;
-        background-color: #c2A0AC;
-        display: grid;
+        background-color: #B54554;
+        /* display: grid; */
         /* grid-column-gap: 10px;
         grid-row-gap: 10px; */
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-
-        
+        /* grid-template-columns: auto auto;
+        grid-template-rows: auto auto; */
+        display: flex;
+        flex-direction: row;
     }
     #skills div{
-        margin: 35px;
+        margin: 0px;
         text-align: center;
-        font-size: x-large;
-        /* background-color: ; */
+        font-size: xx-large;
+        flex: 1;
+        color: #FEFFFE;
+        /* padding-left: 5%;
+        padding-right: 5%; */
+
+    }
+    #skills img{
+        margin-top: 15px;
+    }
+    #skills h1{
+        margin-top: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }

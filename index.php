@@ -111,7 +111,7 @@
         <div style="flex: 7; display: flex; flex-direction: row;">
             <!-- photo -->
             <div style="flex: 4; text-align: center;">
-                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "550vh">
+                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "500vh">
             </div>
             <!-- bio -->
             <div style="flex: 6;" id = "bio">
@@ -123,35 +123,48 @@
         </div>
         <!-- timeline -->
         <div style="flex: 3; color: transparent; text-align: center;">
-            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="375vh"></a>
+            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="325vh"></a>
         </div>
         
     </div>
 
     <!-- skills -->
     <div id="skills">
-        <div>
-            <h1>1</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
+        <div style = "background-color: #C2A0AC;">
+        <img src = "programming.svg" height = "100px" width ="100px">
+        <div  style = "background-color: #B54554;"><h1>Programming Languages</h1></div>
+        <p>Java</p>
+        <p>HTML/CSS</p>
+        <p>JavaScript</p>
+        <p>PHP</p>
+        <p>MySQL</p>
         </div>
+
         <div>
-        <h1>2</h1>
-
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
+        <img src = "coursework.svg" height = "100px" width ="100px">
+        <div style = "background-color: #C2A0AC;"><h1>Notable Coursework</h1></div>
+        <p>Data Structures & Algorithms</p>
+        <p>Multivariable Calculus</p>
+        <p>Full-Stack Web Development</p>
+        <p>Matrix Algebra</p>
         </div>
-        <div>
-        <h1>3</h1>
 
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
+        <div style = "background-color: #C2A0AC;">
+        <img src = "software.svg" height = "100px" width ="100px">
+        <div  style = "background-color: #B54554;"><h1>Software Applications</h1></div>
+        <p>Github</p>
+        <p>Quickbooks Accountant</p>
+        <p>Adalo</p>
+        <p>Webflow</p>
         </div>
+
         <div>
-        <h1>4</h1>
-
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
+        <img src = "misc.svg" height = "100px" width ="100px">
+        <div style = "background-color: #C2A0AC;"><h1>Miscellaneous Skills</h1></div>
+        <p>Limited Working Proficiency in Korean</p>
+        <p>Biomedical Research</p>
+        <p>Poetry Writing</p>
+        <p>Contemporary Dance</p>
         </div>
 
     </div>
