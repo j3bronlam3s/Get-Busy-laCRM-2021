@@ -111,7 +111,7 @@
         <div style="flex: 7; display: flex; flex-direction: row;">
             <!-- photo -->
             <div style="flex: 4; text-align: center;">
-                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "500vh">
+                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "525vh">
             </div>
             <!-- bio -->
             <div style="flex: 6;" id = "bio">
@@ -123,7 +123,7 @@
         </div>
         <!-- timeline -->
         <div style="flex: 3; color: transparent; text-align: center;">
-            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="325vh"></a>
+            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="350vh"></a>
         </div>
         
     </div>

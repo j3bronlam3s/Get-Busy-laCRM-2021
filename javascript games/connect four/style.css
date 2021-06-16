@@ -13,6 +13,10 @@
     background-image: url(blueSquare.jpeg);
 }
 
+.taken{
+    background-image:unset;
+}
+
 .player-one{
     background-color: palevioletred;
     border-radius: 50px;
