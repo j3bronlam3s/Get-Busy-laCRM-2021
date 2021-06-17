@@ -169,6 +169,62 @@
 
     </div>
 
+    <!-- projects -->
+    <div id = "projects">
+        <h1>Coming Soon!</h1>
+    </div>
+
+    <!-- contact me -->
+    <div id = "contactMe">
+        <h1>Contact Me</h1>
+        <form style = "display: flex; flex-direction: row;">
+            <div style = "flex: 1; width: 50%; display: flex; flex-direction: column;">
+
+            <div style = "flex: 1;">
+                <label for="fName">First Name</label>
+                <input type="text" id="fName" name = "firstName" placeholder = "Your First Name">
+            </div>
+
+            <br>
+
+            <div style = "flex: 1;">
+                <label for="lName">Last Name</label>
+                <input type="text" id="lName" name = "lastName" placeholder = "Your Last Name">
+            </div>
+
+            <br>
+
+            <div style = "flex: 1;">
+                <label for="pronouns">Pronouns</label>
+                <input type="text" id="pNouns" name = "pronouns" placeholder = "he/him or they/them or etc.">
+            </div>
+
+            <br>
+            
+            <div style = "flex: 1;">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name = "emailAddress" placeholder = "johndoe@xyz.com">
+            </div>
+            </div>
+
+            <div style = "flex: 1; width: 50%; display: flex; flex-direction: column;">
+            <div style = "flex: 1;">
+                <label for="subj">Subject</label>
+                <input type="text" id="subj" name = "subject" placeholder = "Write Something">
+            </div>
+
+            <div style = "flex: 4;">
+                <label for="message">Message</label>
+                <textarea id="message" name = "message" place holder = "Your Message Here"></textarea>
+            </div>
+
+            <div style = "flex: 1;">
+                <input type="submit" value = "submit">
+            </div>
+            </div>
+    </form>
+    </div>
+
 <!-- page end -->
 </div>
 
