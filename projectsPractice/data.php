@@ -2,15 +2,15 @@
 $projArray = [
     0 => ["name" => "Javascript Arcade",
         "Date Completed" => "Summer 2021",
-        "Description" => "I wanted to learn more about using JavaScript to create dynamic websites so I took a course that taught JavaScript using grid-based games. I then styled thses games as I wanted and combined them into an easy to view arcade."]
+        "Description" => "I wanted to learn more about using JavaScript to create dynamic websites so I took a course that taught JavaScript using grid-based games. I then styled these games as I wanted and combined them into an easy to view arcade."]
     ,
     1 => ["name" => "Email Validator",
     "Date Completed" => "Summer 2021",
-    "Description" => "I wanted to try to use JavaScript to replicate common website functions so I created an email validator that checks for the prescence of an '@', length, and a valid TLD."]
+    "Description" => "I wanted to try to use JavaScript to replicate common website functions so I created an email validator that checks for the presence of an '@', length, and a valid TLD."]
     ,
     3 => ["name" => "Spotify Replica",
     "Date Completed" => "Summer 2021",
-    "Description" => "I used figma to create a replica of the spotify homepage."]
+    "Description" => "I used Figma, an online web design software, to create a replica of the Spotify homepage."]
     ,
     4 => ["name" => "Drizzle",
     "Date Completed" => "In Progress",
