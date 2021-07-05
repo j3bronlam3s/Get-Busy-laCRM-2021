@@ -3,51 +3,51 @@ document.addEventListener('DOMContentLoaded', () => {
 const cardArray = [
     {
         name: 'red',
-        img: 'images/redSquare.jpeg'
+        img: 'redSquare.jpeg'
     },
     {
         name: 'red',
-        img: 'images/redSquare.jpeg'
+        img: 'redSquare.jpeg'
     },
     {
         name: 'orange',
-        img: 'images/orangeSquare.jpeg'
+        img: 'orangeSquare.jpeg'
     },
     {
         name: 'orange',
-        img: 'images/orangeSquare.jpeg'
+        img: 'orangeSquare.jpeg'
     },
     {
         name: 'yellow',
-        img: 'images/yellowSquare.jpeg'
+        img: 'yellowSquare.jpeg'
     },
     {
         name: 'yellow',
-        img: 'images/yellowSquare.jpeg'
+        img: 'yellowSquare.jpeg'
     },
     {
         name: 'green',
-        img: 'images/greenSquare.jpeg'
+        img: 'greenSquare.jpeg'
     },
     {
         name: 'green',
-        img: 'images/greenSquare.jpeg'
+        img: 'greenSquare.jpeg'
     },
     {
         name: 'blue',
-        img: 'images/blueSquare.jpeg'
+        img: 'blueSquare.jpeg'
     },
     {
         name: 'blue',
-        img: 'images/blueSquare.jpeg'
+        img: 'blueSquare.jpeg'
     },
     {
         name: 'purple',
-        img: 'images/purpleSquare.jpeg'
+        img: 'purpleSquare.jpeg'
     },
     {
         name: 'purple',
-        img: 'images/purpleSquare.jpeg'
+        img: 'purpleSquare.jpeg'
     }
 ]
 
@@ -64,7 +64,7 @@ var cardsWon = []
 function createBoard() {
 for(let i = 0; i < cardArray.length; i++){
     var card = document.createElement('img')
-    card.setAttribute('src', 'images/blankSquare.jpeg')
+    card.setAttribute('src', 'blankSquare.jpeg')
     card.setAttribute('data-id', i)
     card.addEventListener('click', flipcard)
     grid.appendChild(card)
@@ -78,14 +78,16 @@ function checkForMatch(){
     const optionTwoId = cardsChosenId[1]
     if(cardsChosen[0]===cardsChosen[1]){
         alert('You found a match')
-        cards[optionOneId].setAttribute('src', 'images/whiteSquare.jpeg')
-        cards[optionTwoId].setAttribute('src', 'images/whiteSquare.jpeg')
+        cards[optionOneId].setAttribute('src', 'whiteSquare.jpeg')
+        cards[optionTwoId].setAttribute('src', 'whiteSquare.jpeg')
+        cards[optionId].removeEventListener('click', flipcard)
+        cards[optionTwoId].removeEventListener('click', flipcard)
         cardsWon.push(cardsChosen)
     }
     else{
         alert('Sorry, try again')
-        cards[optionOneId].setAttribute('src', 'images/blankSquare.jpeg')
-        cards[optionTwoId].setAttribute('src', 'images/blankSquare.jpeg')
+        cards[optionOneId].setAttribute('src', 'blankSquare.jpeg')
+        cards[optionTwoId].setAttribute('src', 'blankSquare.jpeg')
     }
     cardsChosen = []
     cardsChosenId = []

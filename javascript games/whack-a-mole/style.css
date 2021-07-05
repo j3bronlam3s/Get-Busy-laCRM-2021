@@ -7,14 +7,20 @@
 .grid{
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
     height: 618px;
     width: 618px;
+    margin: auto;
 }
 .mole{
     background-image: url('mole.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+body{
+    text-align: center;
+    background-color: cornsilk;
+}
+.gameOver{
+    pointer-events: none;
 }

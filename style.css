@@ -70,7 +70,7 @@
         height:inherit;
         background-color: transparent;
     }
-    a:visited, link{
+    #intro a:visited, link{
         color: #FEFFFE;
     }
     .iconWrapper{
@@ -104,11 +104,6 @@
         height: 100vh;
         width: 100%;
         background-color: #B54554;
-        /* display: grid; */
-        /* grid-column-gap: 10px;
-        grid-row-gap: 10px; */
-        /* grid-template-columns: auto auto;
-        grid-template-rows: auto auto; */
         display: flex;
         flex-direction: row;
     }
@@ -122,7 +117,6 @@
     }
     #skills img{
         margin-top: 15px;
-        /* margin-bottom: 0px; */
     }
     #skills h1{
         margin-top: 15px;
@@ -136,17 +130,46 @@
         text-align: center;
         font-size: xx-large;
         background-image: url(aboutMeBackground.png);
+        color:rgb(181, 69, 84);
+        display: flex;
+        flex-direction: column;
+    }
+    table{
+        width: 90%;
+        margin: auto;
+        border-collapse: collapse;
+    }
+    table, td, th{
+        border: 5px solid #B54554;
+        text-align: center;
+    }
+    th{
+        color: #FEFFFE;
+        font-size: xx-large;
+        background-color: #B54554;
+    }
+    td{
+        color: #1F271B;
+        font-size: x-large;
+        background-color: #C2A0AC;
+    }
+    #projects a:visited,link{
+
     }
     #projects h1{
         vertical-align: middle;
         margin: 0px;
+        color:rgb(32, 28, 28);
+    }
+    #projectsHeader{
+        font-size: xx-large;
     }
     #contactMe{
         height: 50vh;
         width: 100%;
         text-align: center;
         font-size: xx-large;
-        background-image: url(personalBackground.jpg); 
+        background-color: #C2A0AC;
         display: flex;
         flex-direction: row;
         vertical-align: middle;
