@@ -12,8 +12,6 @@ function randomSquare(){
     })
     let randomPosition = square[Math.floor(Math.random()*9)]
     randomPosition.classList.add('mole')
-
-    //randomPosition to hitPosition for later use
     hitPosition = randomPosition.id
 }
 
@@ -39,6 +37,15 @@ function countdown(){
     if(currentTime === 0){
         clearInterval(timerId)
         alert('GAME OVER! Your final score is: ' + result)
+        square.forEach(element => element.classList.add('gameOver'))
+        square.forEach(id => {
+            id.removeEventListener('mouseup', () => {
+                if(id.id === hitPosition){
+                    result = result+1
+                    score.textContent = result
+                }
+            })
+        })
     }
 }
 

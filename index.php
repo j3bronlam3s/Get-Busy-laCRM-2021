@@ -1,4 +1,6 @@
-
+<?php
+include('config/init.php')
+?>
 <head>
     <title>Jebron Perkins</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -61,7 +63,7 @@
                             </div>
                         <div class = "box">
                             <a href="#tbd" style="text-decoration: none;  display: block; height: 100%;">
-                                <p>tbd</p>
+                                <p>blog</p>
                             </a>
                         </div>
                             <div class = "boxBreaker">
@@ -123,7 +125,7 @@
         </div>
         <!-- timeline -->
         <div style="flex: 3; color: transparent; text-align: center;">
-            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="350vh"></a>
+            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="275vh"></a>
         </div>
         
     </div>
@@ -170,8 +172,38 @@
     </div>
 
     <!-- projects -->
+    <!-- $result = dbQuery("SELECT name FROM projects where project_id = 1")->fetchAll(); -->
     <div id = "projects">
-        <h1>Coming Soon!</h1>
+        <div>
+            <h1>Projects</h1>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Date Completed</th>
+                    <th>Description</th>
+                </tr>
+            <?php
+            // $projectsArray = dbQuery('SELECT * from projects')->fetchAll();
+            // $project_id = mysql_real_escape_string($_REQUEST['project_id']);
+            // $projectsArray = dbQuery('SELECT * from projects where project_id = :project_id', ['project_id' => $_REQUEST['project_id']])->fetchAll();
+                $projectsArray = dbQuery('SELECT * from projects')->fetchAll();
+                foreach($projectsArray as $project){
+                    echo "
+                        <tr>
+                            <td>
+                            <a href = view_project.php/?project_id=$project[project_id]>
+                            $project[name]</a>
+                            </td>
+                            <td>$project[date_completed]</td>
+                            <td>$project[description]</td>
+                        </tr>
+                    ";
+                }
+            ?>
+            </table>
+        </div>
     </div>
 
     <!-- contact me -->

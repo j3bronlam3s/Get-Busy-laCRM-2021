@@ -1,0 +1,35 @@
+<head>
+    <title>Restaurant Calculator</title>
+    <link rel = "stylesheet" href = "rest2.css">
+</head>
+<body>
+    <h1>Restaurant Calculator</h1>
+    <label for = "subtotal">Subtotal</label>
+    <br><br>
+    <input type="number" id = "subtotal">
+    <br><br>
+    <label for = "taxes">Taxes & Fees</label>
+    <br><br>
+    <input type="number" id = "taxes">
+    <br><br>
+    <label for = "people">Number of People</label>
+    <br><br>
+    <input type="number" id = "people">
+    <br><br>
+    <div class="slidecontainer">
+        <label for = "tipRange">Tip Percentage: <span id = "tipValue">20</span>%</label>
+        <br><br>
+        <input type="range" min="1" max="100" value="20" class="slider" id="tipRange">
+    </div>
+    <br><br>
+    <button onclick="calculate()">Calculate</button>
+    <br><br>
+    <h2>Tip: $<span id = "tip">0</span></h2>
+    <h2>Total: $<span id = "total">0</span></h2>
+    <h2>Each Person Owes: $<span id = "totalpp">0</span></h2>
+    <h2>Subtotal Per Person: $<span id = "subtotalpp">0</span></h2>
+    <h2>Taxes & Fees Per Person: $<span id = "taxespp">0</span></h2>
+    <h2>Tip Per Person: $<span id = "tippp">0</span></h2>
+
+</body>
+<script src='rest2.js'></script>

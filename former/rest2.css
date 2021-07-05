@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    background-color: tomato;
+    color: whitesmoke;
+}
+body label{
+    font-size: xx-large;
+}
+body h1{
+    font-size: 50px;
+    font-style: italic;
+}

@@ -3,8 +3,12 @@
     flex-wrap: wrap;
     height: 300px;
     width: 400px;
-
+    margin: auto;
 }
 body{
     text-align: center;
+    background-color: cornsilk;
+}
+.turned{
+    pointer-events: none;
 }
