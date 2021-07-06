@@ -1,0 +1,28 @@
+.grid{
+    border: 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 700px;
+
+}
+
+.grid div{
+    height: 100px;
+    width: 100px;
+    background-image: url(blueSquare.jpeg);
+}
+
+.taken{
+    background-image:unset;
+}
+
+.player-one{
+    background-color: palevioletred;
+    border-radius: 50px;
+}
+
+.player-two{
+    background-color: palegoldenrod;
+    border-radius: 50px;
+}
