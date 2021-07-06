@@ -13,7 +13,7 @@ include('config/init.php')
         $appArray = dbQuery('SELECT * from arcade')->fetchALL();
         foreach($appArray as $app){
         echo "<div class='widget'>";
-        echo "<a href= 'viewArcade.php/?app_id=$app[app_id]'style='text-decoration: none; display: block; height: 100%;'>";
+        echo "<a href= '$app[code]'style='text-decoration: none; display: block; height: 100%; color: #FEFFFE;'>";
             echo "<img src = $app[icon]>";
             echo "<h2>$app[name]</h2>";
         echo "</a>";
