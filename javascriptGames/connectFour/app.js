@@ -11,30 +11,42 @@ document.addEventListener('DOMContentLoaded', () =>{
         squares[i].onclick = function(){
             //if the box below is taken you can play on it
             if(squares[index + 7].classList.contains('taken')){
+                if(squares[index].classList.contains('player-one') || squares[index].classList.contains('player-two')){
+                    alert('This Spot is Taken')
+                }
+                else{
                 if(currentPlayer === 1){
+                    squares[index].classList.remove('untaken')
                     squares[index].classList.add('taken')
                     squares[index].classList.add('player-one')
-                    console.log("p1 play")
                     //change the player
                     currentPlayer = 2
                     displayCurrentPlayer.innerHTML = currentPlayer
                 } 
                 else if(currentPlayer === 2){
+                    squares[index].classList.remove('untaken')
                     squares[index].classList.add('taken')
                     squares[index].classList.add('player-two')
-                    console.log("p2 play")
                     //change the player
                     currentPlayer = 1
                     displayCurrentPlayer.innerHTML = currentPlayer
                 }
             }
+            }
             //invalid square
                 else{
-                    alert('Inavalid Move')
+                    alert('Invalid Move')
                 }
         }
     })(i)
 
+function gameOver(){
+    for(var i = 0, len = squares.length; i < len; ++i){
+        squares[i].onclick = function(){
+            alert('Game Over')
+        }
+    }
+}
 //check for win/lose
 function checkBoard(){
     let winningArray = [ 
@@ -78,13 +90,15 @@ function checkBoard(){
         square4.classList.contains('player-one')){
             //p1 wins
             result.innerHTML = "Player One Wins!"
+            gameOver();
         }
         else if(square1.classList.contains('player-two') && 
         square2.classList.contains('player-two') &&
         square3.classList.contains('player-two') &&
         square4.classList.contains('player-two')){
-            //p1 wins
+            //p2 wins
             result.innerHTML = "Player Two Wins!"
+            gameOver();
         }
     }
 }
