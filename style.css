@@ -154,7 +154,8 @@
         background-color: #C2A0AC;
     }
     #projects a:visited,link{
-
+        color: #1F271B;
+        text-decoration: none;
     }
     #projects h1{
         vertical-align: middle;
@@ -175,5 +176,10 @@
         vertical-align: middle;
     }
     #contactMe input{
-        width: inherit;
+        width: 75%;
+    }
+    #contactme textarea{
+        width: 90%;
+        height: 25vh;
+        margin: auto;
     }

@@ -110,10 +110,10 @@ include('config/init.php')
     <!-- About Me -->
     <div id = "aboutMe">
 
-        <div style="flex: 7; display: flex; flex-direction: row;">
+        <div style="flex: 7; display: flex; flex-direction: row; height: 65vh;">
             <!-- photo -->
             <div style="flex: 4; text-align: center;">
-                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "525vh">
+                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "95%">
             </div>
             <!-- bio -->
             <div style="flex: 6;" id = "bio">
@@ -124,8 +124,8 @@ include('config/init.php')
         
         </div>
         <!-- timeline -->
-        <div style="flex: 3; color: transparent; text-align: center;">
-            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="275vh"></a>
+        <div style="flex: 3; color: transparent; text-align: center; height: 35vh">
+            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="95%"></a>
         </div>
         
     </div>
@@ -208,51 +208,63 @@ include('config/init.php')
 
     <!-- contact me -->
     <div id = "contactMe">
-        <h1>Contact Me</h1>
-        <form style = "display: flex; flex-direction: row;">
+        <div style = "width: 30%; margin: auto;">
+            <h1>Contact Me</h1>
+        </div>
+        <form style = "display: flex; flex-direction: row; width: 70%">
             <div style = "flex: 1; width: 50%; display: flex; flex-direction: column;">
 
-            <div style = "flex: 1;">
-                <label for="fName">First Name</label>
-                <input type="text" id="fName" name = "firstName" placeholder = "Your First Name">
-            </div>
+                <div style = "flex: 1;">
+                    <br>
+                    <label for="fName">First Name</label>
+                    <br>
+                    <input type="text" id="fName" name = "firstName" placeholder = "Your First Name">
+                </div>
 
-            <br>
+                <br>
 
-            <div style = "flex: 1;">
-                <label for="lName">Last Name</label>
-                <input type="text" id="lName" name = "lastName" placeholder = "Your Last Name">
-            </div>
+                <div style = "flex: 1;">
+                    <label for="lName">Last Name</label>
+                    <br>
+                    <input type="text" id="lName" name = "lastName" placeholder = "Your Last Name">
+                </div>
 
-            <br>
+                <br>
 
-            <div style = "flex: 1;">
-                <label for="pronouns">Pronouns</label>
-                <input type="text" id="pNouns" name = "pronouns" placeholder = "he/him or they/them or etc.">
-            </div>
+                <div style = "flex: 1;">
+                    <label for="pronouns">Pronouns</label>
+                    <br>
+                    <input type="text" id="pNouns" name = "pronouns" placeholder = "he/him or they/them or etc.">
+                </div>
 
-            <br>
-            
-            <div style = "flex: 1;">
-                <label for="email">Email Address</label>
-                <input type="text" id="email" name = "emailAddress" placeholder = "johndoe@xyz.com">
-            </div>
+                <br>
+                
+                <div style = "flex: 1;">
+                    <label for="email">Email Address</label>
+                    <br>
+                    <input type="text" id="email" name = "emailAddress" placeholder = "johndoe@xyz.com">
+                </div>
             </div>
 
             <div style = "flex: 1; width: 50%; display: flex; flex-direction: column;">
-            <div style = "flex: 1;">
-                <label for="subj">Subject</label>
-                <input type="text" id="subj" name = "subject" placeholder = "Write Something">
-            </div>
+                <div style = "flex: 1;">
+                    <br>
+                    <label for="subj">Subject</label>
+                    <br>
+                    <input type="text" id="subj" name = "subject" placeholder = "Write Something">
+                </div>
 
-            <div style = "flex: 4;">
-                <label for="message">Message</label>
-                <textarea id="message" name = "message" place holder = "Your Message Here"></textarea>
-            </div>
+                <div style = "flex: 4;">
+                    <label for="message">Message</label>
+                    <br>
+                    <textarea id="message" name = "message" placeholder = "Your Message Here"></textarea>
+                    <br>
+                </div>
 
-            <div style = "flex: 1;">
-                <input type="submit" value = "submit">
-            </div>
+                <div style = "flex: 1;">
+                <br>
+                    <input type="submit" value = "submit" style = "width: 20%; font-size: large;">
+                </div>
             </div>
     </form>
     </div>
