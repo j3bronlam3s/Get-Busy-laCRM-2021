@@ -1,0 +1,58 @@
+body{
+    margin: 0px;
+}
+#home{
+    display: flex;
+    flex-direction: row;
+   
+}
+#left{
+    background-color: #3b413c;
+    height: 100vh;
+    width: 35%;
+    text-align: center;
+}
+#title{
+    font-family: 'Codystar', cursive;
+    color: #82A403;
+    font-size: 60px;
+}
+#left h2{
+    font-family: 'Montserrat', sans-serif;
+    color: #DAF0EE;
+    font-size: 35px;
+    margin-top: -5%;
+}
+#left h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    color: #82A403;
+}
+#left p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+#right{
+    background-image: url(blogHomeBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+#posts{
+    margin: auto;
+    background-color: rgba(255, 255, 255, .6);
+    border-radius: 5%;
+    width: 40%;
+    height: 85vh;
+    text-align: center;
+    padding: auto;
+}
+#right h1{
+    color: #3b413c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+}
