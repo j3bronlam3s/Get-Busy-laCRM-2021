@@ -63,7 +63,7 @@ include('config/init.php')
                             </div>
                         <div class = "box">
                             <a href="blog/blogHome.php" style="text-decoration: none;  display: block; height: 100%;">
-                                <p>blog</p>
+                                <p>blog (wip)</p>
                             </a>
                         </div>
                             <div class = "boxBreaker">
