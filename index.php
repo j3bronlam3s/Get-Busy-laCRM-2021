@@ -62,8 +62,8 @@ include('config/init.php')
                                 <p> </p>
                             </div>
                         <div class = "box">
-                            <a href="#tbd" style="text-decoration: none;  display: block; height: 100%;">
-                                <p>blog</p>
+                            <a href="blog/blogHome.php" style="text-decoration: none;  display: block; height: 100%;">
+                                <p>blog (wip)</p>
                             </a>
                         </div>
                             <div class = "boxBreaker">
@@ -193,7 +193,7 @@ include('config/init.php')
                     echo "
                         <tr>
                             <td>
-                            <a href = view_project.php/?project_id=$project[project_id]>
+                            <a href = $project[code]>
                             $project[name]</a>
                             </td>
                             <td>$project[date_completed]</td>
