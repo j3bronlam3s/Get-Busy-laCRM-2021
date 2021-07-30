@@ -1,4 +1,3 @@
-<!-- Ad AVlidation, situate and then code review -->
 <?php
 include('config/init.php');
 if(isset($_REQUEST['newComment'])){

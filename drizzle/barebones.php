@@ -4,9 +4,7 @@
 
 <html>
 <head>
-    <?php
-        jarTitle();
-    ?>
+    <title></title>
 
     <link rel = "stylesheet" href = "homeStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,9 +18,7 @@
        <div id = "header">
            <!-- logo -->
            <div id = "logo">
-           <a href = "drizzleHome.php" style = 'display: block; color: #fbfafa'>
                <h1>Drizzle</h1>
-                </a>
             </div>
             <!-- blank space -->
             <div id = "headerSpace">
@@ -37,19 +33,7 @@
        </div>
        <!-- body of the page -->
         <div id = "interface">
-            <div id = "sidebar">
-                    <div id = "innerSidebar">
-                        <h2>Rain Jars</h2>
-                    </div>
-            </div>
-            <!-- display -->
-            <div id = "innerWhitespace">
-                <div id = "innerDisplay">
-                    <?php
-                        getDrizzlesJar();
-                    ?>
-                </div>
-            </div>
+
         </div>
     </div>
 </body>
