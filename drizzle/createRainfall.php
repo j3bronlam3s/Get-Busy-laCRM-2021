@@ -1,18 +1,18 @@
 <?php
 include('drizzleConfig/drizzleInit.php');
 
-if(isset($_REQUEST['createJar'])){
+if(isset($_REQUEST['createRainfall'])){
 
         if(!$_REQUEST['name']){
                 $Errors['name'] = 'required';
         }
 
-        if(!$_REQUEST['subtitle']){
-                $Errors['subtitle'] = 'required';
+        if(!$_REQUEST['interval']){
+                $Errors['interval'] = 'required';
         }
 
         if(sizeof($Errors) == 0){
-            newJar();
+            newRainfall();
             // header('location:practiceForm.php');
         }
         else{
@@ -24,22 +24,22 @@ if(isset($_REQUEST['createJar'])){
 
 <html>
 <head>
-    <title>Create a New Jar</title>
+    <title>Create a New Rainfall</title>
     <!-- <link rel = "stylesheet" href = "practiceFormStyle.css"> -->
 </head>
 <body>
-    <h1>Create a New Jar</h1>
+    <h1>Create a New Rainfall</h1>
     <form action='' method='post'>
         Name:
             <br>
         <input type = 'text' name = 'name'>
             <br>
-        Subtitle:
+        Interval (days):
             <br>
-        <input type = 'text' name = 'subtitle'>
+        <input type = 'number' name = 'interval'>
             <br>
             <br>
-        <input type = 'submit' name = 'createJar' value = 'Create'>
+        <input type = 'submit' name = 'createRainfall' value = 'Create'>
         
     </form>
 </body>

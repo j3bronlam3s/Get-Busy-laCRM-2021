@@ -5,7 +5,7 @@
 <html>
 <head>
     <?php
-        jarTitle();
+        rainfallTitle();
     ?>
 
     <link rel = "stylesheet" href = "homeStyle.css">
@@ -20,8 +20,8 @@
        <div id = "header">
            <!-- logo -->
            <div id = "logo">
-           <a href = "drizzleHome.php" style = 'display: block; color: #fbfafa'>
-               <h1>Drizzle</h1>
+                <a href = "drizzleHome.php" style = 'display: block; color: #fbfafa'>
+             <h1>Drizzle</h1>
                 </a>
             </div>
             <!-- blank space -->
@@ -38,18 +38,18 @@
        <!-- body of the page -->
         <div id = "interface">
             <div id = "sidebar">
-                    <div id = "innerSidebar">
-                        <h2>Rain Jars</h2>
-                    </div>
-            </div>
-            <!-- display -->
-            <div id = "innerWhitespace">
-                <div id = "innerDisplay">
-                    <?php
-                        getDrizzlesJar();
-                    ?>
+                        <div id = "innerSidebar">
+                            <h2>Rainfalls</h2>
+                        </div>
                 </div>
-            </div>
+                <!-- display -->
+                <div id = "innerWhitespace">
+                    <div id = "innerDisplay">
+                        <?php
+                            getDrizzlesRainfall();
+                        ?>
+                    </div>
+                </div>
         </div>
     </div>
 </body>

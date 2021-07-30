@@ -1,0 +1,265 @@
+/*
+Blue - #3772ff
+Light Blue - #709bff
+White - #fbfafa
+Coral - #ed6a5a 
+ */
+
+/* 
+font-family: 'Bungee', cursive;
+font-family: 'Bungee Shade', cursive;
+font-family: 'Montserrat', sans-serif;
+ */
+body{
+     margin: 0;
+}
+a{
+    text-decoration: none;
+}
+#landing{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#header{
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #3772ff;
+}
+#logo{
+    display: flex;
+    font-family: 'Bungee Shade', cursive;
+    font-size: xx-large;
+    text-align: center;
+    color: #fbfafa;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 25%;
+}
+#headerSpace{
+    width: 35%;
+}
+#links{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fbfafa;
+    font-family: 'Montserrat', sans-serif;
+}
+#links a:visited,link{
+    color: #fbfafa;
+}
+#interface{
+    background-color: #fbfafa;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    width: 25%;
+}
+#sidebar div{
+    flex: 1;
+    font-family: 'Bungee', cursive;
+    word-wrap: break-word;
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    align-items: center;
+}
+.selectedSidebarButton{
+    background-color: #709bff;
+    color: #fbfafa;
+}
+.unselectedSidebarButton{
+    background-color: #fbfafa;
+    color: #709bff;
+    box-shadow: inset 0px 0px 0px 5px #709bff;
+}
+#displayWhitespace{
+    height: 85vh;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#display{
+    height: 95%;
+    width: 95%;
+}
+#rainfallDisplay, #rainjarDisplay{
+    height: inherit;
+    width: 100%;
+}
+#display a{
+    display: block;
+    text-decoration: none;
+    color: #fbfafa;
+    width: 100%;
+    text-align: center;
+}
+.selectedDisplay{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #fbfafa
+}
+.unselectedDisplay{
+    display: none;
+}
+.rainfall{
+    background-image: url(rainfallIcon.svg);
+    width: 40%;
+    display: flex;
+    height: 50%;
+    align-items: center;
+    line-height: 0;
+    justify-content: center;
+    font-family: 'Bungee', cursive;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fbfafa;
+    background-position: center;
+    font-size: xx-large;
+    text-align: center;
+}
+.rainjar{
+    background-image: url(rainjarIcon.svg);
+    width: 21%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Bungee', cursive;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #fbfafa;
+    background-position: center;
+    font-size: xx-large;
+}
+.addNew{
+    background-image: url(addIcon.svg);
+    background-repeat: no-repeat;
+    height: 50%;
+    background-size: contain;
+    background-position: center;
+}
+#innerSidebar{
+    background-color: #709bff;
+    color: #fbfafa;
+}
+#innerWhitespace{
+    height: 85vh;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#innerDisplay{
+    height: 95%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+#insideName{
+    border-radius: 25px 25px 0px 0px;
+    background-color: #3772ff;
+    color: #fbfafa;
+    font-family: 'Bungee', cursive;
+    font-size: xx-large;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+#jarSubtitle{
+    background-color: #709bff;
+    color: #fbfafa;
+    font-family: 'Bungee', cursive;
+    font-size: x-large;
+    box-shadow: inset 0px 0px 0px 5px #3772ff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+#addDrizzleButton{
+    background-color: #709bff;
+    box-shadow: inset 0px 0px 0px 5px #3772ff;
+    color: #fbfafa;
+    font-family: 'Bungee', cursive;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    border-radius:  0px 0px 25px 25px;
+}
+#drizzleTable{
+    display: flex;
+    flex-direction: column;
+    
+}
+#drizzleCell{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#drizzleText{
+    flex: 7;
+    background-color: #fbfafa;
+    box-shadow: inset 0px 0px 0px 5px #3772ff;
+    color: #3772ff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+#drizzleInfo{
+    flex: 3;
+    box-shadow: inset 0px 0px 0px 5px #3772ff;
+    color: #ed6a5a;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+#rainfallInfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+}
+#rainfallInfo div{
+    background-color: #709bff;
+    box-shadow: inset 0px 0px 0px 5px #3772ff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    font-family: 'Bungee', cursive;
+}
+#lastDate{
+    flex: 2;
+    color: #fbfafa;
+}
+#interval{
+    flex:1;
+    color: #ed6a5a;
+    text-shadow: 2px 2px 0px #fbfafa;
+}
+#nextDate{
+    flex: 2;
+    color: #fbfafa;
+}
+

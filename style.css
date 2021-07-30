@@ -15,6 +15,9 @@
         margin: 0px;
         
     }
+    a{
+        text-decoration: none;
+    }
     #intro{
         background-image:url(personalBackground.jpg);
         background-repeat: no-repeat;
@@ -154,8 +157,7 @@
         background-color: #C2A0AC;
     }
     #projects a:visited,link{
-        color: #1F271B;
-        text-decoration: none;
+        color: #FEFFFE;
     }
     #projects h1{
         vertical-align: middle;
