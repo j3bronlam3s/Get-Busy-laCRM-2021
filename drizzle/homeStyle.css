@@ -118,8 +118,8 @@ a{
     display: none;
 }
 .rainfall{
-    background-image: url(rainfallIcon.svg);
-    width: 40%;
+    background-image: url(images/rainfallIcon.svg);
+    width: 30%;
     display: flex;
     height: 50%;
     align-items: center;
@@ -134,7 +134,7 @@ a{
     text-align: center;
 }
 .rainjar{
-    background-image: url(rainjarIcon.svg);
+    background-image: url(images/rainjarIcon.svg);
     width: 21%;
     height: 50%;
     display: flex;
@@ -142,17 +142,25 @@ a{
     justify-content: center;
     font-family: 'Bungee', cursive;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 90% 90%;
     color: #fbfafa;
     background-position: center;
     font-size: xx-large;
 }
 .addNew{
-    background-image: url(addIcon.svg);
+    background-image: url(images/addIcon.svg);
     background-repeat: no-repeat;
     height: 50%;
-    background-size: contain;
+    /* overwritten in rainfall display */
+    background-size: 90% 90%;
     background-position: center;
+    display: flex;
+    align-items: center;
+}
+.addNew a{
+    display: block;
+    height: 90%;
+    width: 90%;
 }
 #innerSidebar{
     background-color: #709bff;
@@ -170,6 +178,8 @@ a{
     width: 80%;
     display: flex;
     flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
 }
 #insideName{
     border-radius: 25px 25px 0px 0px;
@@ -207,6 +217,11 @@ a{
     align-items: center;
     height: 25%;
     border-radius:  0px 0px 25px 25px;
+}
+#addDrizzleButton a{
+    color: inherit;
+    height: inherit;
+    width: inherit;
 }
 #drizzleTable{
     display: flex;
@@ -262,4 +277,61 @@ a{
     flex: 2;
     color: #fbfafa;
 }
-
+#formBody{
+    border-radius: 25px;
+    background-color: #3772ff;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    height: inherit;
+    width: inherit;
+    margin: auto;
+}
+#formHeader{
+    height: 25%;
+    font-family: 'Bungee', cursive;
+    color: #fbfafa;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#inputContainer{
+    height: 60%;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#inputContainer input{
+    height: 15%;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    border: solid 5px #ed6a5a;
+    font-size: x-large;
+}
+#inputContainer select{
+    height: 15%;
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    border: solid 5px #ed6a5a;
+    font-size: x-large;
+}
+#submitButton{
+    height: 15vh;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#submitButton input{
+    border-radius: 25px;
+    background-color: #709bff;
+    font-family: 'Bungee', cursive;
+    font-size: x-large;
+    color: #fbfafa;
+    height: 60%;
+    width: 30%;
+}

@@ -2,17 +2,48 @@
 date_default_timezone_set('America/Chicago');
 include('drizzleConfig/drizzleConfig.php');
 include('drizzleInclude/db_query.php'); 
+
 //creation
 function newJar(){
-
+    $account_id = 1;
+    dbQuery('
+    INSERT INTO jars(account_id, name, subtitle, num_notes, created)
+    VALUES(:account_id, :name, :subtitle, :num_notes, :created)
+    ', [
+    'account_id' => $account_id,
+    'name' => $_REQUEST['name'],
+    'subtitle' => $_REQUEST['subtitle'],
+    'num_notes' => 0,
+    'created' => date('Y-m-d')
+    ]);
 }
 
 function newRainfall(){
-
+    $account_id = 1;
+    dbQuery('
+    INSERT INTO rainfalls(account_id, name, delta_time, last_date, next_date, num_notes)
+    VALUES(:account_id, :name, :delta_time, :last_date, :next_date, :num_notes)
+    ', [
+    'account_id' => $account_id,
+    'name' => $_REQUEST['name'],
+    'delta_time' => $_REQUEST['interval'],
+    'last_date' => date('Y-m-d'),
+    'next_date' => date('Y-m-d', strtotime('+'.$_REQUEST['interval'].' days')),
+    'num_notes' => 0
+    ]);
 }
 
 function newDrizzle(){
-
+    dbQuery('
+    INSERT INTO notes(jar_id, rainfall_id, account_id, text, last_edited)
+    VALUES(:jar_id, :rainfall_id, :account_id, :text, :last_edited)
+    ', [
+    'jar_id' => $_REQUEST['jar'],
+    'rainfall_id' => $_REQUEST['rainfall'],
+    'account_id' => $_REQUEST['account_id'],
+    'text' => $_REQUEST['text'],
+    'last_edited' => date('Y-m-d')
+    ]);
 }
 
 //homepage
@@ -23,7 +54,7 @@ function getJars(){
     foreach($jarArray as $jar){
         echo "
                 <div class = rainjar>
-                <a href = viewJar.php?jar_id=$jar[jar_id]&account_id=$jar[account_id]>
+                <a href = viewJar?jar_id=$jar[jar_id]&account_id=$jar[account_id]>
                 <h3>$jar[name]</h3>
                 </a>
                 </div>
@@ -31,8 +62,8 @@ function getJars(){
     }
         echo "
                 <div class = addNew style = 'width: 21%'>
-                <a href = >
-                
+                <a href = createJar>
+                <p> </p>
                 </a>
                 </div>
             ";
@@ -40,8 +71,8 @@ function getJars(){
     else{
         echo "
                 <div class = addNew style = 'width: 21%'>
-                <a href = >
-                
+                <a href = createJar>
+                <p> </p>
                 </a>
                 </div>
             ";
@@ -61,7 +92,7 @@ function getRainfalls(){
         }
         echo "
                 <div class = rainfall>
-                <a href = viewRainfall.php?rainfall_id=$rainfall[rainfall_id]&account_id=$rainfall[account_id]>
+                <a href = viewRainfall?rainfall_id=$rainfall[rainfall_id]&account_id=$rainfall[account_id]>
                 <h3 style = 'text-shadow: 2px 2px 0px #3772ff;'>$rainfall[name]</h3>
                 <h3 style = 'text-shadow: 2px 2px 0px #fbfafa; color: #ed6a5a; font-size: xx-large'>$rainfall[next_date]</h3>
                 <h3 style = 'text-shadow: 2px 2px 0px #fbfafa; color: #3772ff; font-size: x-large'>Every $rainfall[delta_time] $unitOfTime</h3>
@@ -70,8 +101,8 @@ function getRainfalls(){
             ";
     }
         echo "
-                <div class = addNew style = 'width: 40%'>
-                <a href = >
+                <div class = addNew style = 'width: 30%; background-size: 70% 70%;'>
+                <a href = createRainfall>
                 
                 </a>
                 </div>
@@ -79,8 +110,8 @@ function getRainfalls(){
     }
     else{
         echo "
-                <div class = addNew style = 'width: 40%'>
-                <a href = >
+                <div class = addNew style = 'width: 30%; background-size: 70% 70%;'>
+                <a href = createRainfall>
                 
                 </a>
                 </div>
@@ -124,7 +155,7 @@ function getDrizzlesJar(){
                         ";
                            $rainfall = dbQuery('SELECT * from rainfalls where account_id = :account_id AND rainfall_id = :rainfall_id', ['account_id' => $_REQUEST['account_id'], 'rainfall_id' => $note['rainfall_id']])->fetch();
                     echo"
-                        <a href = 'viewRainfall.php?rainfall_id=$rainfall[rainfall_id]&account_id=$_REQUEST[account_id]' style = 'display: block; color: #ed6a5a'>
+                        <a href = 'viewRainfall?rainfall_id=$rainfall[rainfall_id]&account_id=$_REQUEST[account_id]' style = 'display: block; color: #ed6a5a'>
                         <p>
                         <b>$rainfall[name]</b> - $rainfall[next_date]
                         </p>
@@ -136,10 +167,14 @@ function getDrizzlesJar(){
         echo "
             <!-- add drizzle -->
             <div id = addDrizzleButton>
-                <div style = 'background-image: url(addIcon.svg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 20%;'>
+                <div style = 'background-image: url(images/addIcon.svg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 20%;'>
+                    <a href = createDrizzle?jar_id=$jar[jar_id]&account_id=$_REQUEST[account_id] style = 'display: block; height: 100%; width: 100%'>
+                    <a>
                 </div>
                 <div>
-                <h2>Add New Drizzle</h2>
+                    <a href = createDrizzle?jar_id=$jar[jar_id]&account_id=$_REQUEST[account_id] style = 'display: block;'>
+                        <h2>Add New Drizzle</h2>
+                    </a>
                 </div>
             </div>
             </div>
@@ -194,7 +229,7 @@ function getDrizzlesRainfall(){
                         ";
                             $jar = dbQuery('SELECT * from jars where account_id = :account_id AND jar_id = :jar_id', ['account_id' => $_REQUEST['account_id'], 'jar_id' => $note['jar_id']])->fetch();
                     echo"
-                        <a href = 'viewJar.php?jar_id=$jar[jar_id]&account_id=$_REQUEST[account_id]' style = 'display: block; color: #ed6a5a'>
+                        <a href = 'viewJar?jar_id=$jar[jar_id]&account_id=$_REQUEST[account_id]' style = 'display: block; color: #ed6a5a'>
                         <p>
                         <b>$jar[name]</b>
                         </p>
@@ -206,10 +241,14 @@ function getDrizzlesRainfall(){
         echo "
             <!-- add drizzle -->
             <div id = addDrizzleButton>
-                <div style = 'background-image: url(addIcon.svg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 20%;'>
+                <div style = 'background-image: url(images/addIcon.svg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 20%;'>
+                    <a href = createDrizzle?rainfall_id=$rainfall[rainfall_id]&account_id=$_REQUEST[account_id] style = 'display: block; height: 100%; width: 100%'>
+                    <a>
                 </div>
                 <div>
-                <h2>Add New Drizzle</h2>
+                    <a href = createDrizzle?rainfall_id=$rainfall[rainfall_id]&account_id=$_REQUEST[account_id] style = 'display: block;'>
+                        <h2>Add New Drizzle</h2>
+                    </a>
                 </div>
             </div>
             </div>
@@ -234,9 +273,16 @@ function validateText($text){
 
 }
 
+//array helpers
+function existingJars(){
+    $jarArray = dbQuery('SELECT * from jars where account_id = '.$_REQUEST['account_id'])->fetchAll();
+    return $jarArray;
+}
 
-
-
+function existingRainfalls(){
+    $rainfallArray = dbQuery('SELECT * from rainfalls where account_id = '.$_REQUEST['account_id'])->fetchAll();
+    return $rainfallArray;
+}
 
 
 
