@@ -18,7 +18,7 @@
        <div id = "header">
            <!-- logo -->
            <div id = "logo">
-               <a href = "drizzleHome.php" style = 'display: block; color: #fbfafa'>
+               <a href = "drizzleHome" style = 'display: block; color: #fbfafa'>
                <h1>Drizzle</h1>
                 </a>
             </div>

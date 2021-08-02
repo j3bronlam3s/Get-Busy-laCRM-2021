@@ -18,7 +18,9 @@
        <div id = "header">
            <!-- logo -->
            <div id = "logo">
-               <h1>Drizzle</h1>
+                <a href = "drizzleHome" style = 'display: block; color: #fbfafa'>
+                    <h1>Drizzle</h1>
+                </a>
             </div>
             <!-- blank space -->
             <div id = "headerSpace">
@@ -33,7 +35,17 @@
        </div>
        <!-- body of the page -->
         <div id = "interface">
-
+            <!-- sidebar -->
+            <div id = "sidebar">
+                <div id = "innerSidebar">
+                    <h2>Text</h2>
+                </div>
+            </div>
+            <!-- display -->
+            <div id = "innerWhitespace">
+                <div id = "innerDisplay">
+                </div>
+            </div>
         </div>
     </div>
 </body>
