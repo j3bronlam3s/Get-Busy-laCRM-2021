@@ -1,7 +1,7 @@
 <?php
 include('drizzleConfig/drizzleInit.php');
 
-if(isset($_REQUEST['createJar'])){
+if(isset($_REQUEST['editJar'])){
     $Errors = [];
         if(!$_REQUEST['name']){
                 $Errors['name'] = 'required';
@@ -12,19 +12,24 @@ if(isset($_REQUEST['createJar'])){
         }
 
         if(sizeof($Errors) == 0){
-            newJar();
-            header('location:drizzleHome');
+            editJar();
+            header("location: viewJar?account_id=$_REQUEST[account_id]&jar_id=$_REQUEST[jar_id]");
         }
         else{
             var_dump($Errors);
             die('Errors');
         }
 }
+
+if(isset($_REQUEST['deleteJar'])){
+    deleteJar();
+    header("location:drizzleHome");
+}
 ?>
 
 <html>
 <head>
-    <title>Create a New Rain Jar</title>
+    <title>Edit Your Rain Jar</title>
 
     <link rel = "stylesheet" href = "homeStyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,7 +58,7 @@ if(isset($_REQUEST['createJar'])){
                 <a href = ""><h3>Log Out</h3></a>
             </div>
        </div>
-<form action = '' method = 'post' style = "height: 100%; witdh: 100%;">
+<form action = '' method = 'post' style = "height: 100%; width: 100%;">
        <!-- body of the page -->
         <div id = "interface">
             <!-- sidebar -->
@@ -67,14 +72,35 @@ if(isset($_REQUEST['createJar'])){
                 <div id = "innerDisplay">
                     <div id = "formBody">
                         <div id = "formHeader">
-                            <h2>Create a New Rain Jar</h2>
+                            <h2>Edit Your Rain Jar</h2>
                         </div>
                             <div id = "inputContainer">
-                                <input type = 'text' name = 'name' placeholder = 'Rain Jar Name' required>
-                                <input type = 'text' name = 'subtitle' placeholder = 'Subtitle' required>
+                                <input type = 'text' name = 'name' value = 
+                                    <?php
+                                    $jarArray = existingJars();
+                                    $name = "";
+                                    foreach($jarArray as $jar){
+                                        if($jar['jar_id'] == $_REQUEST['jar_id']){
+                                            $name = $jar['name'];
+                                        }
+                                    }
+                                    echo $name;
+                                    ?>
+                                required>
+                                <input type = 'text' name = 'subtitle' value = '<?php
+                                    $jarArray = existingJars();
+                                    $subtitle = "";
+                                    foreach($jarArray as $jar){
+                                        if($jar['jar_id'] == $_REQUEST['jar_id']){
+                                            $subtitle = $jar['subtitle'];
+                                        }
+                                    }
+                                    echo htmlspecialchars($subtitle, ENT_QUOTES);
+                                    ?>' required>
                             </div>
                             <div id = submitButton>
-                                <input id = "submitButton" type = 'submit' name = 'createJar' value = 'Create'>
+                                <input id = "submitButton" type = 'submit' name = 'editJar' value = 'Save'>
+                                <input id = "submitButton" type = 'submit' name = 'deleteJar' value = 'Delete'>
                             </div>
                     </div>
                 </div>

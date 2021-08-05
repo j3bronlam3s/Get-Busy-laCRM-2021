@@ -35,7 +35,7 @@
     }
     #welcome{
         font-family: 'Dosis', sans-serif;
-        font-size:xx-large;
+        font-size: 2.5vw;
         text-align: center;
         color: #1F271B;
         height: fit-content;
@@ -57,7 +57,7 @@
         border-radius: 5%;
         color: #FEFFFE;
         text-align: center;
-        font-size: x-large;
+        font-size: 1.75vw;
         display: flex;
         flex-direction: column;
     }
@@ -65,7 +65,6 @@
         background-color: rgb(32, 28, 28);
         color:#FEFFFE;
         box-shadow: 10px 10px 10px 10px rgb(181, 69, 84);
-        /* , 0 5px 50px 0 purple; */
         opacity: 1;
         }
     .boxBreaker{
@@ -100,8 +99,37 @@
         height:inherit;
         width:inherit;
     }
-    #bio{
-        font-size: x-large;
+    #photo{
+        flex: 4;
+        background-image: url(IMG_5542.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* border: solid 10px rgb(181, 69, 84);  */
+        margin: 10px; 
+        /* border-radius: 5%; */
+    }
+    #bio p{
+        font-size: 2.75vw; 
+        text-align: center;
+    }
+    #timeline{
+        flex: 3;
+        color: transparent;
+        text-align: center;
+        height: 35vh;
+        background-image: url(timeline6.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #timeline a{
+        height: 100%;
+        width: 60%;
+        display: block;
     }
     #skills{
         height: 100vh;
@@ -113,10 +141,12 @@
     #skills div{
         margin: 0px;
         text-align: center;
-        font-size: xx-large;
         flex: 1;
         color: #FEFFFE;
-
+    }
+    .skillColumn{
+       width: 25%;
+       font-size: 1.75vw;
     }
     #skills img{
         margin-top: 15px;
@@ -125,6 +155,9 @@
         margin-top: 15px;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    #skills p{
+        font-size: 2vw;
     }
     #projects{
         margin-top: 0px;
@@ -148,12 +181,12 @@
     }
     th{
         color: #FEFFFE;
-        font-size: xx-large;
+        font-size: 2vw;
         background-color: #B54554;
     }
     td{
         color: #1F271B;
-        font-size: x-large;
+        font-size: 1.75vw;
         background-color: #C2A0AC;
     }
     #projects a:visited,link{
@@ -171,7 +204,7 @@
         height: 50vh;
         width: 100%;
         text-align: center;
-        font-size: xx-large;
+        font-size: 2vw;
         background-color: #C2A0AC;
         display: flex;
         flex-direction: row;

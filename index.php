@@ -152,25 +152,25 @@ include('config/init.php');
 
         <div style="flex: 7; display: flex; flex-direction: row; height: 65vh;">
             <!-- photo -->
-            <div style="flex: 4; text-align: center;">
-                <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "95%">
+            <div id = "photo">
+                <!-- <img style="border: solid 10px rgb(181, 69, 84); margin: 10px; border-radius: 5%;" alt="Picture of Jebron Perkins" src="IMG_5542.jpg"height = "95%"> -->
             </div>
             <!-- bio -->
             <div style="flex: 6;" id = "bio">
-                <p style = "font-size: xxx-large; text-align: center">Hi, I’m Jebron Perkins. I am currently 17 and a rising sophomore at Washington University in St. Louis. I am a Computer Science Major, minoring in Korean and Dance. I have experience in Full-Stack Development and Web Design and am hoping to get experience in Mobile App Development. <br><br> Please click on the timeline below to gain a closer look into my experiences.</p>
+                <p>Hi, I’m Jebron Perkins. I am currently 17 and a rising sophomore at Washington University in St. Louis. I am a Computer Science Major, minoring in Korean and Dance. I have experience in Full-Stack Development and Web Design and am hoping to get experience in Mobile App Development. <br><br> Please click on the timeline below to gain a closer look into my experiences.</p>
             </div>
         
         </div>
         <!-- timeline -->
-        <div style="flex: 3; color: transparent; text-align: center; height: 35vh">
-            <a href = "Jebron Perkins - Resume.pdf"><img src="timeline6.svg" height="95%"></a>
+        <div id = "timeline">
+            <a href = "Jebron Perkins - Resume.pdf"></a>
         </div>
         
     </div>
 
     <!-- skills -->
     <div id="skills">
-        <div style = "background-color: #C2A0AC;">
+        <div style = "background-color: #C2A0AC;" class = "skillColumn">
         <img src = "programming.svg" height = "100px" width ="100px">
         <div  style = "background-color: #B54554;"><h1>Programming Languages</h1></div>
         <p>Java</p>
@@ -180,7 +180,7 @@ include('config/init.php');
         <p>MySQL</p>
         </div>
 
-        <div>
+        <div class = "skillColumn">
         <img src = "coursework.svg" height = "100px" width ="100px">
         <div style = "background-color: #C2A0AC;"><h1>Notable Coursework</h1></div>
         <p>Data Structures & Algorithms</p>
@@ -189,7 +189,7 @@ include('config/init.php');
         <p>Matrix Algebra</p>
         </div>
 
-        <div style = "background-color: #C2A0AC;">
+        <div style = "background-color: #C2A0AC;" class = "skillColumn">
         <img src = "software.svg" height = "100px" width ="100px">
         <div  style = "background-color: #B54554;"><h1>Software Applications</h1></div>
         <p>Github</p>
@@ -198,7 +198,7 @@ include('config/init.php');
         <p>Webflow</p>
         </div>
 
-        <div>
+        <div class = "skillColumn">
         <img src = "misc.svg" height = "100px" width ="100px">
         <div style = "background-color: #C2A0AC;"><h1>Miscellaneous Skills</h1></div>
         <p>Limited Working Proficiency in Korean</p>

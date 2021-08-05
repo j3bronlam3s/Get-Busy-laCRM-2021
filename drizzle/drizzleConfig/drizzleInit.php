@@ -135,7 +135,7 @@ function getDrizzlesJar(){
     $noteArray = dbQuery('SELECT * from notes where account_id = :account_id AND jar_id = :jar_id', ['account_id' => $_REQUEST['account_id'], 'jar_id' => $_REQUEST['jar_id']])->fetchAll();
     echo"
             <!-- name -->
-            <div id = insideName>
+            <div id = jarName>
                 <h2>$jar[name]</h2>
             </div>
             <!-- subtitle -->
@@ -201,7 +201,7 @@ function getDrizzlesRainfall(){
     }
     echo"
             <!-- name -->
-            <div id = insideName>
+            <div id = rainfallName>
                 <h2>$rainfall[name]</h2>
             </div>
             <!-- subtitle -->
@@ -256,15 +256,45 @@ function getDrizzlesRainfall(){
 }
 
 //editing
+//add parameters
 function editJar(){
-
+    dbQuery('
+    UPDATE jars
+    SET
+    name = :name,
+    subtitle = :subtitle
+    WHERE jar_id = :jar_id AND account_id = :account_id' , 
+    [
+    'name' => $_REQUEST['name'],
+    'subtitle' => $_REQUEST['subtitle'],
+    'jar_id' => $_REQUEST['jar_id'],
+    'account_id' => $_REQUEST['account_id'],
+    ]);
 }
 
 function editRainfall(){
-
+    
 }
 
 function editDrizzle(){
+
+}
+
+//deletion
+// archive vs delete
+function deleteJar(){
+    dbQuery('
+    DELETE FROM jars
+    where jar_id = :jar_id AND account_id = :account_id' , 
+    [
+    'account_id' => $_REQUEST['account_id'],
+    'jar_id' => $_REQUEST['jar_id']
+    ]);
+}
+function deleteRainfall(){
+
+}
+function deleteDrizzle(){
 
 }
 
@@ -282,6 +312,11 @@ function existingJars(){
 function existingRainfalls(){
     $rainfallArray = dbQuery('SELECT * from rainfalls where account_id = '.$_REQUEST['account_id'])->fetchAll();
     return $rainfallArray;
+}
+
+function existingDrizzles(){
+    $drizzleArray = dbQuery('SELECT * from notes where account_id = '.$_REQUEST['account_id'])->fetchAll();
+    return $drizzleArray;
 }
 
 
