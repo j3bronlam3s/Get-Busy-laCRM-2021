@@ -84,7 +84,7 @@ if(isset($_REQUEST['deleteJar'])){
                                             $name = $jar['name'];
                                         }
                                     }
-                                    echo $name;
+                                    echo htmlspecialchars($name, ENT_QUOTES);
                                     ?>
                                 required>
                                 <input type = 'text' name = 'subtitle' value = '<?php

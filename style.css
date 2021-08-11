@@ -72,7 +72,7 @@
         height:inherit;
         background-color: transparent;
     }
-    #intro a:visited, link{
+    #intro a:visited, a:link{
         color: #FEFFFE;
     }
     .iconWrapper{
@@ -164,7 +164,7 @@
         height: 100vh;
         width: 100%;
         text-align: center;
-        font-size: xx-large;
+        font-size: 2vw;
         background-image: url(aboutMeBackground.png);
         color:rgb(181, 69, 84);
         display: flex;
@@ -189,7 +189,7 @@
         font-size: 1.75vw;
         background-color: #C2A0AC;
     }
-    #projects a:visited,link{
+    #projects a:link, a:visited{
         color: #FEFFFE;
     }
     #projects h1{
@@ -198,7 +198,10 @@
         color:rgb(32, 28, 28);
     }
     #projectsHeader{
-        font-size: xx-large;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #contactMe{
         height: 50vh;

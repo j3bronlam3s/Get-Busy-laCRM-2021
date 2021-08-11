@@ -1,5 +1,60 @@
 <?php
-    include('drizzleConfig/drizzleInit.php');
+include('drizzleConfig/drizzleInit.php');
+
+if(isset($_REQUEST['editRainfall'])){
+    $Errors = [];
+        if(!$_REQUEST['name']){
+                $Errors['name'] = 'required';
+        }
+
+        if(!$_REQUEST['interval']){
+                $Errors['interval'] = 'required';
+        }
+
+        if(sizeof($Errors) == 0){
+            editRainfall();
+            header("location:viewRainfall?rainfall_id=$_REQUEST[rainfall_id]&account_id=$_REQUEST[account_id]");
+        }
+        else{
+            var_dump($Errors);
+            die('Errors');
+        }
+}
+
+if(isset($_REQUEST['deleteRainfall'])){
+    deleteRainfall();
+    header("location:drizzleHome");
+}
+
+if(isset($_REQUEST['editDrizzle'])){
+    $Errors = [];
+        if(!$_REQUEST['jar']){
+                $Errors['jar'] = 'required';
+        }
+
+        if(!$_REQUEST['rainfall']){
+            $Errors['rainfall'] = 'required';
+        }
+
+        if(!$_REQUEST['text']){
+            $Errors['text'] = 'required';
+        }
+
+        if(sizeof($Errors) == 0){
+            editDrizzle();
+            header("location: viewRainfall?account_id=$_REQUEST[account_id]&rainfall_id=$_REQUEST[rainfall_id]");
+        }
+        else{
+            var_dump($Errors);
+            die('Errors');
+        }
+}
+
+if(isset($_REQUEST['deleteDrizzle'])){
+    deleteDrizzle();
+    header("location: viewRainfall?account_id=$_REQUEST[account_id]&rainfall_id=$_REQUEST[rainfall_id]");
+}
+
 ?>
 
 <html>
@@ -32,7 +87,7 @@
                 <a href = ""><h3>My Account</h3></a>
                 <a href = ""><h3>Contact Us</h3></a>
                 <a href = ""><h3>About</h3></a>
-                <a href = ""><h3>Log Out</h3></a>
+                <a href = "drizzleLogout"><h3>Log Out</h3></a>
             </div>
        </div>
        <!-- body of the page -->
@@ -46,8 +101,42 @@
                 <div id = "innerWhitespace">
                     <div id = "innerDisplay">
                         <?php
-                            getDrizzlesRainfall();
+                            getDrizzlesInRainfall();
                         ?>
+                    </div>
+                    <div id = "rainfallEditDisplay" style = "display: none;">
+                        <form action = '' method = 'post' class = "formBody">
+                            <div id = "formHeader">
+                                <h2>Edit Your Rainfall</h2>
+                            </div>
+                                <div id = "inputContainer">
+                                    <input type = 'text' name = 'name' value = '<?php
+                                        $rainfallArray = existingRainfalls();
+                                        $name = "";
+                                        foreach($rainfallArray as $rainfall){
+                                            if($rainfall['rainfall_id'] == $_REQUEST['rainfall_id']){
+                                                $name = $rainfall['name'];
+                                            }
+                                        }
+                                        echo htmlspecialchars($name, ENT_QUOTES);
+                                        ?>'
+                                    required>
+                                    <input type = 'number' name = 'interval' value = '<?php
+                                        $rainfallArray = existingRainfalls();
+                                        $interval = 0;
+                                        foreach($rainfallArray as $rainfall){
+                                            if($rainfall['rainfall_id'] == $_REQUEST['rainfall_id']){
+                                                $interval = $rainfall['delta_time'];
+                                            }
+                                        }
+                                        echo $interval;
+                                        ?>' required>
+                                </div>
+                                <div id = submitButton>
+                                    <input id = "submitButton" type = 'submit' name = 'editRainfall' value = 'Save'>
+                                    <input id = "submitButton" type = 'submit' name = 'deleteRainfall' value = 'Delete'>
+                                </div>
+                        </form>
                     </div>
                 </div>
         </div>

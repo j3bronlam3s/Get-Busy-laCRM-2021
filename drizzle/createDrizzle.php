@@ -1,6 +1,7 @@
 <?php
 include('drizzleConfig/drizzleInit.php');
 
+
 if(isset($_REQUEST['jar_id'])){
     $headerLocation = "location:viewJar?jar_id=$_REQUEST[jar_id]&account_id=$_REQUEST[account_id]";
 }
@@ -61,7 +62,7 @@ if(isset($_REQUEST['createDrizzle'])){
                 <a href = ""><h3>My Account</h3></a>
                 <a href = ""><h3>Contact Us</h3></a>
                 <a href = ""><h3>About</h3></a>
-                <a href = ""><h3>Log Out</h3></a>
+                <a href = "drizzleLogout"><h3>Log Out</h3></a>
             </div>
        </div>
 <form action = '' method = 'post' style = "height: 100%; witdh: 100%;">
@@ -75,8 +76,8 @@ if(isset($_REQUEST['createDrizzle'])){
             </div>
             <!-- display -->
             <div id = "innerWhitespace">
-                <div id = "innerDisplay">
-                    <div id = "formBody">
+            <div id = "innerDisplay">
+                    <div class = "formBody">
                         <div id = "formHeader">
                             <h2>Create a New Drizzle</h2>
                         </div>

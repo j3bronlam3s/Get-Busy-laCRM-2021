@@ -113,7 +113,9 @@ include('config/init.php');
 
                     </div>
                     <div>
-                        <em><p style = "text-align: center; color: #FEFFFE">Please view on desktop and adjust zoom for best experience</p></em>
+                        <br>
+                        <br>
+                        <em><p style = "text-align: center; color: #FEFFFE">Please view on desktop for best experience</p></em>
                     </div>
                 </div>
                 <!-- bottom page whitespace -->
@@ -212,7 +214,7 @@ include('config/init.php');
     <!-- projects -->
     <!-- $result = dbQuery("SELECT name FROM projects where project_id = 1")->fetchAll(); -->
     <div id = "projects">
-        <div>
+        <div id = "projectsHeader">
             <h1>Projects</h1>
         </div>
         <div>
@@ -301,7 +303,8 @@ include('config/init.php');
 
                 <div style = "flex: 1;">
                 <br>
-                    <input type="submit" name="newEmail" value = "Submit" style = "width: 20%; font-size: large;">
+                    <input type="submit" name="newEmail" value = "Submit" style = "width: 20%; font-size: 1.25vw; background-color: #B54554; color: #FEFFFE; border-radius: 25px">
+                <br>
                 </div>
             </div>
     </form>
