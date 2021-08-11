@@ -30,7 +30,7 @@
                 <a href = ""><h3>My Account</h3></a>
                 <a href = ""><h3>Contact Us</h3></a>
                 <a href = ""><h3>About</h3></a>
-                <a href = ""><h3>Log Out</h3></a>
+                <a href = "drizzleLogout"><h3>Log Out</h3></a>
             </div>
        </div>
        <!-- body of the page -->
