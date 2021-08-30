@@ -424,11 +424,11 @@ function getDrizzlesInRainfall(){
             <!-- add drizzle -->
             <div id = addDrizzleButton>
                 <div style = 'background-image: url(images/addIcon.svg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 20%;'>
-                    <a href = createDrizzle?rainfall_id=$rainfall[rainfall_id]&account_id=$_REQUEST[account_id] style = 'display: block; height: 100%; width: 100%'>
+                    <a href = createDrizzle?rainfall_id=$_REQUEST[rainfall_id]&account_id=$_REQUEST[account_id] style = 'display: block; height: 100%; width: 100%'>
                     <a>
                 </div>
                 <div>
-                    <a href = createDrizzle?rainfall_id=$rainfall[rainfall_id]&account_id=$_REQUEST[account_id] style = 'display: block;'>
+                    <a href = createDrizzle?rainfall_id=$_REQUEST[rainfall_id]&account_id=$_REQUEST[account_id] style = 'display: block;'>
                         <h2>Add New Drizzle</h2>
                     </a>
                 </div>

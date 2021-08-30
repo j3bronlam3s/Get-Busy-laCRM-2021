@@ -52,7 +52,7 @@ a{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.25vw;
 }
-#links a:visited,link{
+#links a:visited, a:link{
     color: #fbfafa;
 }
 #interface{
@@ -207,7 +207,7 @@ a{
     background-color: #709bff;
     color: #fbfafa;
     font-family: 'Bungee', cursive;
-    font-size: 2vw;
+    font-size: 1.5vw;
     box-shadow: inset 0px 0px 0px 5px #3772ff;
     text-align: center;
     display: flex;
@@ -279,7 +279,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2vw;
+    font-size: 1.75vw;
     font-family: 'Bungee', cursive;
 }
 #lastDate{
